@@ -1,0 +1,7 @@
+<div style="position: relative" class="dropdown">
+    <ng-content (click)="onDropdownClick()"></ng-content>
+
+    <div *ngIf="isOpen" class="menu">
+        <ng-content select="a"></ng-content>
+    </div>
+</div>

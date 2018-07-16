@@ -1,0 +1,115 @@
+<div class="modal-header">
+    <h5 class="modal-title">{{card.cardTitle}}</h5>
+    <button type="button" class="close" (click)="close()" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <div class="row justify-content-center" *ngIf="isSaving">
+        <i class="fas fa-spinner fa-spin fa-5x"></i>
+    </div>
+    <form *ngIf="!isSaving">
+        <div class="form-check">
+            <input 
+                class="form-check-input"
+                type="radio"
+                name="saved"
+                id="saved"
+                [value]="stateValue"
+                [checked]="stateValue === 'saved'"
+                (click)="updateState('saved')"
+                [disabled]="!isEnabled('saved')">
+            <label class="form-check-label" for="saved">
+                saved
+            </label>
+        </div>
+        <div class="form-check">
+            <input 
+                class="form-check-input"
+                type="radio"
+                name="pending"
+                id="pending"
+                [value]="stateValue"
+                [checked]="stateValue === 'pending'"
+                (click)="updateState('pending')"
+                [disabled]="!isEnabled('pending')">
+            <label class="form-check-label" for="pending">
+                pending
+            </label>
+        </div>
+        <div class="form-check">
+            <input 
+                class="form-check-input"
+                type="radio"
+                name="declined"
+                id="declined"
+                [value]="stateValue"
+                [checked]="stateValue === 'declined'"
+                (click)="updateState('declined')"
+                [disabled]="!isEnabled('declined')">
+            <label class="form-check-label" for="declined">
+                declined
+            </label>
+        </div>
+        <div class="form-check">
+            <input 
+                class="form-check-input"
+                type="radio"
+                name="active"
+                id="active"
+                [value]="stateValue"
+                [checked]="stateValue === 'active'"
+                (click)="updateState('active')"
+                [disabled]="!isEnabled('active')">
+            <label class="form-check-label" for="active">
+                active
+            </label>
+        </div>
+        <div class="form-check">
+            <input 
+                class="form-check-input"
+                type="radio"
+                name="paused"
+                id="paused"
+                [value]="stateValue"
+                [checked]="stateValue === 'paused'"
+                (click)="updateState('paused')"
+                [disabled]="!isEnabled('paused')">
+            <label class="form-check-label" for="paused">
+                paused
+            </label>
+        </div>
+        <div class="form-check">
+            <input 
+                class="form-check-input"
+                type="radio"
+                name="terminated"
+                id="terminated"
+                [value]="stateValue"
+                [checked]="stateValue === 'terminated'"
+                (click)="updateState('terminated')"
+                [disabled]="!isEnabled('terminated')">
+            <label class="form-check-label" for="terminated">
+                terminated
+            </label>
+        </div>
+        <div class="form-check">
+            <input 
+                class="form-check-input"
+                type="radio"
+                name="expired"
+                id="expired"
+                [value]="stateValue"
+                [checked]="stateValue === 'expired'"
+                (click)="updateState('expired')"
+                [disabled]="!isEnabled('expired')">
+            <label class="form-check-label" for="expired">
+                expired
+            </label>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="close()">Close</button>
+    <button type="button" class="btn btn-primary" (click)="saveState()">Save changes</button>
+</div>

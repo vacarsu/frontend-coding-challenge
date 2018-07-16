@@ -1,0 +1,16 @@
+.date-switcher {
+    color: #e74b3c;
+    width: 200px;
+}
+
+.date {
+    width: 100%;
+}
+
+.left-arrow {
+    padding-right: 25px;
+}
+
+.right-arrow {
+    padding-left: 25px;
+}

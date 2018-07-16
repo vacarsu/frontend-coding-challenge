@@ -1,0 +1,79 @@
+.card {
+    max-width: 245px;
+}
+
+.card-background {
+    min-height: 151px;
+    background-size: 100% 151px;
+}
+
+.card-footer {
+    height: 49px;
+}
+
+.card-footer-item {
+    padding: 0px 8px 0px 0px;
+}
+
+.edit-btn {
+    color: #ff7b00;
+    font-size: 10px;
+    margin: 5px 5px 0px 0px;
+}
+
+.color-bar {
+    padding-top: 25px;
+}
+
+.color-bar.live {
+    border-bottom: 5px solid #fea144;
+}
+
+.color-bar.grey {
+    border-bottom: 5px solid #e1e1e1;
+}
+
+.menu-item-border {
+    width: 100%;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.red-text {
+    color: #fa0000;
+}
+
+.state-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-top: 6px;
+    margin-left: 5px;
+}
+
+.state-dot.active {
+    background-color: #0ac20c;
+}
+
+.state-dot.saved {
+    background-color: #ff7b00;
+}
+
+.state-dot.pending {
+    background-color: #ff7b00;
+}
+
+.state-dot.paused {
+    background-color: #ff7b00;
+}
+
+.state-dot.declined {
+    background-color: #fa0000;
+}
+
+.state-dot.terminated {
+    background-color: #fa0000;
+}
+
+.state-dot.expired {
+    background-color: #fa0000;
+}

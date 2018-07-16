@@ -1,0 +1,25 @@
+.app-navbar {
+    background-color: #f6f6f6;
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+}
+
+.day-badge {
+    background-color: #e74b3c;
+    border-radius: 15px;
+    color: white;
+    width: 40px;
+    height: 25px;
+}
+
+.day-badge-text {
+    padding-top: 7px;
+}
+
+.nav-row {
+    width: 100%;
+}
+
+.search {
+    padding-right: 32px;
+}

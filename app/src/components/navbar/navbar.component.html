@@ -1,0 +1,37 @@
+<nav class="app-navbar navbar navbar-expand-lg navbar-light bg-light">
+    <div class="nav-row row justify-content-center">
+        <div class="col-xl-6 col-lg-6 col-md-8 col-sm-10">
+            <div class="row">
+                <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-5">
+                    <select-dropdown
+                        [dropdownList]="dropdownList"
+                        (onDropdownChange)="onDropdownChange($event)"
+                        label="All Campaigns">
+                    </select-dropdown>
+                </div>
+
+                <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-5 align-self-center">
+                    <div class="text-muted">
+                        <span><i class="fas fa-list"></i> Pending</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="collapse navbar-collapse col-4 justify-content-end">
+            <div class="date-row row">
+                <div class="search text-muted col-1">
+                    <span><i class="fas fa-search"></i></span>
+                </div>
+
+                <div class="col-7">
+                    <date-switcher></date-switcher>
+                </div>
+
+                <div class="col-3">
+                    <span class="day-badge badge day-badge-text">1d</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
