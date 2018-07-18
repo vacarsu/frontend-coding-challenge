@@ -1,11 +1,11 @@
 <navbar (onFilterChange)="onFilterChange($event)"></navbar>
 <div class="container">
 	<div class="row justify-content-center">
-		<div class="col-lg-11 col-md-11 col-sm-6 col-6">
+		<div class="col-lg-11 col-md-11 col-sm-10 col-10">
 			<div class="card-list row">
 				<div
 					*ngFor="let card of cardsList"
-					class="card-container col-xl-3 col-lg-4 col-md-6 col-sm-10 col-10">
+					class="card-container col-xl-3 col-lg-4 col-md-6 col-sm-6 col-10">
 					<card [card]="card"></card>
 				</div>
 			</div>

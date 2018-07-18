@@ -22,12 +22,8 @@ export class NavbarComponent implements OnInit {
 			});
 	}
 
-	private buildDropdownList(data): Array<DropdownItem> {
-		let list = [];
-		for (let value of data) {
-			list = [{ label: value.campaignName, value: value.id }, ...list];
-		}
-		return list;
+	private buildDropdownList(data: Array<Campaign>): Array<DropdownItem> {
+		return data.map((value) => ({ label: value.campaignName, value: value.id }));
 	}
 
 	private onDropdownChange(item) {

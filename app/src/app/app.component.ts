@@ -26,15 +26,13 @@ export class AppComponent implements OnInit {
 	}
 
 	private buildCardList(data: Array<Card>): Array<Card> {
-		let list = [];
-		for (let value of data) {
+		return data.filter((value: Card) => {
 			if (this.activeFilter && value.campaignId === this.activeFilter.value) {
-				list = [value, ...list];
+				return value;
 			} else if (!this.activeFilter) {
-				list = [value, ...list];
+				return value;
 			}
-		}
-		return list;
+		});
 	}
 
 	private onFilterChange(item: DropdownItem): void {
